@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Álbum Bad - MJ FanPage</title>
     <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         body {
             background-color: #121212;
@@ -35,26 +36,28 @@
             font-weight: bold;
         }
         
-        /* Botões de Streaming pequenos */
+        /* Botões de Streaming redondos com Ícones */
         .botoes-coluna {
             text-align: right;
             white-space: nowrap;
         }
         .btn-mini {
-            display: inline-block;
-            padding: 6px 12px;
-            margin-left: 5px;
-            border-radius: 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            margin-left: 8px;
+            border-radius: 50%;
             text-decoration: none;
-            font-size: 12px;
-            font-weight: bold;
+            font-size: 18px; /* Tamanho do ícone */
             color: white;
             transition: 0.2s;
         }
         .btn-spotify { background-color: #1DB954; }
-        .btn-spotify:hover { background-color: #1ed760; }
+        .btn-spotify:hover { background-color: #1ed760; transform: scale(1.1); }
         .btn-youtube { background-color: #FF0000; }
-        .btn-youtube:hover { background-color: #ff3333; }
+        .btn-youtube:hover { background-color: #ff3333; transform: scale(1.1); }
         
         .btn-voltar { 
             display: inline-block;
@@ -65,7 +68,9 @@
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
+            transition: 0.2s;
         }
+        .btn-voltar:hover { background-color: #444; }
     </style>
 </head>
 <body>
@@ -76,84 +81,61 @@
         <tr>
             <td class="nome-musica">1. Bad</td>
             <td class="botoes-coluna">
-                <a href="https://open.spotify.com/track/2b93Z6coS88777f9vstYF7" target="_blank" class="btn-mini btn-spotify">Spotify</a>
-                <a href="https://www.youtube.com/watch?v=dsUXAEzaC3Q" target="_blank" class="btn-mini btn-youtube">YouTube</a>
+                <a href="https://open.spotify.com/track/2b93Z6coS88777f9vstYF7" target="_blank" class="btn-mini btn-spotify" title="Ouvir no Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/watch?v=dsUXAEzaC3Q" target="_blank" class="btn-mini btn-youtube" title="Assistir no YouTube"><i class="fab fa-youtube"></i></a>
             </td>
         </tr>
         <tr>
             <td class="nome-musica">2. The Way You Make Me Feel</td>
             <td class="botoes-coluna">
-                <a href="https://open.spotify.com/track/2mCg39wX6wG676451e089X" target="_blank" class="btn-mini btn-spotify">Spotify</a>
-                <a href="https://www.youtube.com/watch?v=HzZ_urpj4As" target="_blank" class="btn-mini btn-youtube">YouTube</a>
+                <a href="https://open.spotify.com/track/2mCg39wX6wG676451e089X" target="_blank" class="btn-mini btn-spotify" title="Ouvir no Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/watch?v=HzZ_urpj4As" target="_blank" class="btn-mini btn-youtube" title="Assistir no YouTube"><i class="fab fa-youtube"></i></a>
             </td>
         </tr>
         <tr>
             <td class="nome-musica">3. Speed Demon</td>
             <td class="botoes-coluna">
-                <a href="https://open.spotify.com/track/5u0w3NqVzY33wK7p8vYF6X" target="_blank" class="btn-mini btn-spotify">Spotify</a>
-                <a href="https://www.youtube.com/watch?v=fxZpA6UvQ2E" target="_blank" class="btn-mini btn-youtube">YouTube</a>
+                <a href="https://open.spotify.com/track/5u0w3NqVzY33wK7p8vYF6X" target="_blank" class="btn-mini btn-spotify" title="Ouvir no Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/watch?v=fxZpA6UvQ2E" target="_blank" class="btn-mini btn-youtube" title="Assistir no YouTube"><i class="fab fa-youtube"></i></a>
             </td>
         </tr>
         <tr>
             <td class="nome-musica">4. Liberian Girl</td>
             <td class="botoes-coluna">
-                <a href="https://open.spotify.com/track/1S81XcoU885X6pY7w8F88w" target="_blank" class="btn-mini btn-spotify">Spotify</a>
-                <a href="https://www.youtube.com/watch?v=f3V-7DEAgdc" target="_blank" class="btn-mini btn-youtube">YouTube</a>
+                <a href="https://open.spotify.com/track/1S81XcoU885X6pY7w8F88w" target="_blank" class="btn-mini btn-spotify" title="Ouvir no Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/watch?v=f3V-7DEAgdc" target="_blank" class="btn-mini btn-youtube" title="Assistir no YouTube"><i class="fab fa-youtube"></i></a>
             </td>
         </tr>
         <tr>
             <td class="nome-musica">5. Just Good Friends</td>
             <td class="botoes-coluna">
-                <a href="https://open.spotify.com/track/6p0CcoW3vK567X7Xz8YF99" target="_blank" class="btn-mini btn-spotify">Spotify</a>
-                <a href="https://www.youtube.com/watch?v=vVWeY8X788w" target="_blank" class="btn-mini btn-youtube">YouTube</a>
+                <a href="https://open.spotify.com/track/6p0CcoW3vK567X7Xz8YF99" target="_blank" class="btn-mini btn-spotify" title="Ouvir no Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/watch?v=vVWeY8X788w" target="_blank" class="btn-mini btn-youtube" title="Assistir no YouTube"><i class="fab fa-youtube"></i></a>
             </td>
         </tr>
         <tr>
             <td class="nome-musica">6. Another Part of Me</td>
             <td class="botoes-coluna">
-                <a href="https://open.spotify.com/track/3wX8XcoU885Y6pY7w8F99w" target="_blank" class="btn-mini btn-spotify">Spotify</a>
-                <a href="https://www.youtube.com/watch?v=Ym0hZG-zNOk" target="_blank" class="btn-mini btn-youtube">YouTube</a>
+                <a href="https://open.spotify.com/track/3wX8XcoU885Y6pY7w8F99w" target="_blank" class="btn-mini btn-spotify" title="Ouvir no Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/watch?v=Ym0hZG-zNOk" target="_blank" class="btn-mini btn-youtube" title="Assistir no YouTube"><i class="fab fa-youtube"></i></a>
             </td>
         </tr>
         <tr>
             <td class="nome-musica">7. Man in the Mirror</td>
             <td class="botoes-coluna">
-                <a href="https://open.spotify.com/track/1Y7w8YF6XcoU885X6pY7w8" target="_blank" class="btn-mini btn-spotify">Spotify</a>
-                <a href="https://www.youtube.com/watch?v=PivWY9wn5ps" target="_blank" class="btn-mini btn-youtube">YouTube</a>
+                <a href="https://open.spotify.com/track/1Y7w8YF6XcoU885X6pY7w8" target="_blank" class="btn-mini btn-spotify" title="Ouvir no Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/watch?v=PivWY9wn5ps" target="_blank" class="btn-mini btn-youtube" title="Assistir no YouTube"><i class="fab fa-youtube"></i></a>
             </td>
         </tr>
         <tr>
             <td class="nome-musica">8. I Just Can't Stop Loving You</td>
             <td class="botoes-coluna">
-                <a href="https://open.spotify.com/track/5wG7X7Xz8YF99wK567XcoU" target="_blank" class="btn-mini btn-spotify">Spotify</a>
-                <a href="https://www.youtube.com/watch?v=Yp97O_62-98" target="_blank" class="btn-mini btn-youtube">YouTube</a>
+                <a href="https://open.spotify.com/track/5wG7X7Xz8YF99wK567XcoU" target="_blank" class="btn-mini btn-spotify" title="Ouvir no Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/watch?v=Yp97O_62-98" target="_blank" class="btn-mini btn-youtube" title="Assistir no YouTube"><i class="fab fa-youtube"></i></a>
             </td>
         </tr>
         <tr>
             <td class="nome-musica">9. Dirty Diana</td>
             <td class="botoes-coluna">
-                <a href="https://open.spotify.com/track/5X9XcoU885Y6pY7w8F88wK" target="_blank" class="btn-mini btn-spotify">Spotify</a>
-                <a href="https://www.youtube.com/watch?v=7Hg-IRZ_48Y" target="_blank" class="btn-mini btn-youtube">YouTube</a>
-            </td>
-        </tr>
-        <tr>
-            <td class="nome-musica">10. Smooth Criminal</td>
-            <td class="botoes-coluna">
-                <a href="https://open.spotify.com/track/2w9XcoU885Y6pY7w8F99wK" target="_blank" class="btn-mini btn-spotify">Spotify</a>
-                <a href="https://www.youtube.com/watch?v=h_D3VFfhvs4" target="_blank" class="btn-mini btn-youtube">YouTube</a>
-            </td>
-        </tr>
-        <tr>
-            <td class="nome-musica">11. Leave Me Alone</td>
-            <td class="botoes-coluna">
-                <a href="https://open.spotify.com/track/6Y7w8F99wK567X7Xz8YFco" target="_blank" class="btn-mini btn-spotify">Spotify</a>
-                <a href="https://www.youtube.com/watch?v=crbFmpezO4A" target="_blank" class="btn-mini btn-youtube">YouTube</a>
-            </td>
-        </tr>
-    </table>
-
-    <br>
-    <a href="index.html" class="btn-voltar">← Voltar para a Home</a>
-
-</body>
-</html>
+                <a href="https://open.spotify.com/track/5X9XcoU885Y6pY7w8F88wK" target="_blank" class="btn-mini btn-spotify" title="Ouvir no Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="
