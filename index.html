@@ -4,29 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Jackson</title>
-
     <link rel="icon" type="image/png" href="imagem/image.png">
-
     <link rel="stylesheet" href="Style.css">
-    
-    <style>
-        /* Garante que o botão comece verde (estilo Spotify/moderno) */
-        #btn-foto {
-            background-color: #1db954; 
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.2s ease;
-            margin-bottom: 15px;
-        }
-        #btn-foto:hover {
-            background-color: #1aa34a;
-        }
-    </style>
 </head>
 <body>
 
@@ -40,17 +19,15 @@
     </nav>
 
     <div class="conteudo-principal">
-        <h1>Fala, galera! Sou o Renan. Criei este espaço para compartilhar minha admiração pelo legado do Rei do Pop, Michael Jackson.</h1>
+        <h1>MJ FanPage: O Legado do Rei do Pop</h1>
+        <p class="subtitulo">Olá, eu sou o Renan. Criei este espaço para celebrar a genialidade de Michael Jackson, um artista que transformou a música para sempre.</p>
 
-        <!-- O texto do CD que você pediu -->
         <p>Inclusive, comprei um CD da turnê "This Is It", que seria sua última série de shows. Mas, ele veio a falecer em 2009, poucos dias antes da turnê.</p>
 
-        <!-- O botão verde e a foto posicionados logo abaixo da fala -->
         <button id="btn-foto">Mostrar meu CD de "This Is It"</button>
+        <img id="foto-cd" class="escondida" src="imagem/michael.jpg.jpeg" alt="This Is It">
 
-        <img id="foto-cd" class="escondida" src="imagem/michael.jpg.jpeg" alt="This Is It" style="display: none; opacity: 0; transition: opacity 0.3s ease; margin-bottom: 20px;">
-
-        <h1 class="titulo-secao">Eu gosto muito da música Bad e do álbum Thriller.</h1>
+        <h1 class="titulo-secao">Destaques da Carreira</h1>
 
         <div class="container-albuns">
             <div class="card-album-individual">
@@ -78,13 +55,13 @@
                 fotoCd.style.display = 'block';
                 setTimeout(() => { fotoCd.style.opacity = '1'; }, 10);
                 botao.innerText = 'Esconder meu CD';
-                botao.style.backgroundColor = '#e74c3c'; // Fica vermelho ao mostrar
+                botao.style.backgroundColor = '#e74c3c'; 
             } else {
                 fotoCd.classList.add('escondida');
                 fotoCd.style.display = 'none';
                 fotoCd.style.opacity = '0';
                 botao.innerText = 'Mostrar meu CD de "This Is It"';
-                botao.style.backgroundColor = '#1db954'; // Volta a ser verde ao esconder
+                botao.style.backgroundColor = '#1db954'; 
             }
         });
     </script>
