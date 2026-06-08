@@ -13,63 +13,147 @@
             text-align: center;
             padding: 40px 20px;
         }
-        h1 { color: #FFD700; margin-bottom: 20px; }
-        h2 { color: #FFD700; margin-top: 30px; }
+        h1 { color: #FFD700; margin-bottom: 30px; }
         
-        .lista-musicas {
-            list-style: none;
-            padding: 0;
-            max-width: 400px;
+        /* Estrutura da Tabela de Músicas */
+        .tabela-musicas {
+            width: 100%;
+            max-width: 600px;
             margin: 0 auto;
+            border-collapse: collapse;
             text-align: left;
         }
-        .lista-musicas li {
-            padding: 10px;
+        .tabela-musicas tr {
             border-bottom: 1px solid #333;
         }
+        .tabela-musicas td {
+            padding: 15px 10px;
+            vertical-align: middle;
+        }
+        .nome-musica {
+            font-size: 16px;
+            font-weight: bold;
+        }
         
-        .botoes-streaming { margin-top: 30px; }
-        .btn-stream {
+        /* Botões de Streaming pequenos */
+        .botoes-coluna {
+            text-align: right;
+            white-space: nowrap;
+        }
+        .btn-mini {
             display: inline-block;
-            padding: 12px 24px;
-            margin: 10px;
-            border-radius: 25px;
+            padding: 6px 12px;
+            margin-left: 5px;
+            border-radius: 15px;
             text-decoration: none;
+            font-size: 12px;
             font-weight: bold;
             color: white;
             transition: 0.2s;
         }
         .btn-spotify { background-color: #1DB954; }
+        .btn-spotify:hover { background-color: #1ed760; }
         .btn-youtube { background-color: #FF0000; }
-        .btn-voltar { background-color: #333; color: #FFD700; margin-top: 40px; }
+        .btn-youtube:hover { background-color: #ff3333; }
+        
+        .btn-voltar { 
+            display: inline-block;
+            background-color: #333; 
+            color: #FFD700; 
+            padding: 12px 24px;
+            margin-top: 40px; 
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
     <h1>Álbum Bad (1987)</h1>
     
-    <ul class="lista-musicas">
-        <li>1. Bad</li>
-        <li>2. The Way You Make Me Feel</li>
-        <li>3. Speed Demon</li>
-        <li>4. Liberian Girl</li>
-        <li>5. Just Good Friends</li>
-        <li>6. Another Part of Me</li>
-        <li>7. Man in the Mirror</li>
-        <li>8. I Just Can't Stop Loving You</li>
-        <li>9. Dirty Diana</li>
-        <li>10. Smooth Criminal</li>
-        <li>11. Leave Me Alone</li>
-    </ul>
-
-    <div class="botoes-streaming">
-        <h2>Onde Ouvir:</h2>
-        <a href="https://open.spotify.com/album/2Y936w996uYvAofr7gV47C" target="_blank" class="btn-stream btn-spotify">Ouvir no Spotify</a>
-        <a href="https://www.youtube.com/playlist?list=OLAK5uy_mN3m6T5Z0Y3D_AepOqD8KbeJ_x3WbB7Ag" target="_blank" class="btn-stream btn-youtube">Ouvir no YouTube</a>
-    </div>
+    <table class="tabela-musicas">
+        <tr>
+            <td class="nome-musica">1. Bad</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/2b93Z6coS88777f9vstYF7" target="_blank" class="btn-mini btn-spotify">Spotify</a>
+                <a href="https://www.youtube.com/watch?v=dsUXAEzaC3Q" target="_blank" class="btn-mini btn-youtube">YouTube</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nome-musica">2. The Way You Make Me Feel</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/2mCg39wX6wG676451e089X" target="_blank" class="btn-mini btn-spotify">Spotify</a>
+                <a href="https://www.youtube.com/watch?v=HzZ_urpj4As" target="_blank" class="btn-mini btn-youtube">YouTube</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nome-musica">3. Speed Demon</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/5u0w3NqVzY33wK7p8vYF6X" target="_blank" class="btn-mini btn-spotify">Spotify</a>
+                <a href="https://www.youtube.com/watch?v=fxZpA6UvQ2E" target="_blank" class="btn-mini btn-youtube">YouTube</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nome-musica">4. Liberian Girl</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/1S81XcoU885X6pY7w8F88w" target="_blank" class="btn-mini btn-spotify">Spotify</a>
+                <a href="https://www.youtube.com/watch?v=f3V-7DEAgdc" target="_blank" class="btn-mini btn-youtube">YouTube</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nome-musica">5. Just Good Friends</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/6p0CcoW3vK567X7Xz8YF99" target="_blank" class="btn-mini btn-spotify">Spotify</a>
+                <a href="https://www.youtube.com/watch?v=vVWeY8X788w" target="_blank" class="btn-mini btn-youtube">YouTube</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nome-musica">6. Another Part of Me</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/3wX8XcoU885Y6pY7w8F99w" target="_blank" class="btn-mini btn-spotify">Spotify</a>
+                <a href="https://www.youtube.com/watch?v=Ym0hZG-zNOk" target="_blank" class="btn-mini btn-youtube">YouTube</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nome-musica">7. Man in the Mirror</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/1Y7w8YF6XcoU885X6pY7w8" target="_blank" class="btn-mini btn-spotify">Spotify</a>
+                <a href="https://www.youtube.com/watch?v=PivWY9wn5ps" target="_blank" class="btn-mini btn-youtube">YouTube</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nome-musica">8. I Just Can't Stop Loving You</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/5wG7X7Xz8YF99wK567XcoU" target="_blank" class="btn-mini btn-spotify">Spotify</a>
+                <a href="https://www.youtube.com/watch?v=Yp97O_62-98" target="_blank" class="btn-mini btn-youtube">YouTube</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nome-musica">9. Dirty Diana</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/5X9XcoU885Y6pY7w8F88wK" target="_blank" class="btn-mini btn-spotify">Spotify</a>
+                <a href="https://www.youtube.com/watch?v=7Hg-IRZ_48Y" target="_blank" class="btn-mini btn-youtube">YouTube</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nome-musica">10. Smooth Criminal</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/2w9XcoU885Y6pY7w8F99wK" target="_blank" class="btn-mini btn-spotify">Spotify</a>
+                <a href="https://www.youtube.com/watch?v=h_D3VFfhvs4" target="_blank" class="btn-mini btn-youtube">YouTube</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nome-musica">11. Leave Me Alone</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/6Y7w8F99wK567X7Xz8YFco" target="_blank" class="btn-mini btn-spotify">Spotify</a>
+                <a href="https://www.youtube.com/watch?v=crbFmpezO4A" target="_blank" class="btn-mini btn-youtube">YouTube</a>
+            </td>
+        </tr>
+    </table>
 
     <br>
-    <a href="index.html" class="btn-stream btn-voltar">← Voltar para a Home</a>
+    <a href="index.html" class="btn-voltar">← Voltar para a Home</a>
 
 </body>
 </html>
