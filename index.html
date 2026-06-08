@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Jackson</title>
-    <link rel="icon" type="image/png" href="imagem/image.png">
     <link rel="stylesheet" href="Style.css">
 </head>
 <body>
@@ -13,57 +12,59 @@
         <div class="logo-nav">MJ FanPage</div>
         <div class="links-nav">
             <a href="#">Início</a>
-            <a href="https://www.youtube.com/results?search_query=michael+jackson+albuns" target="_blank" rel="noopener noreferrer">Álbuns</a>
-            <a href="https://pt.wikipedia.org/wiki/Michael_Jackson" target="_blank" rel="noopener noreferrer">História</a>
+            <a href="#">Álbuns</a>
+            <a href="#">História</a>
         </div>
     </nav>
 
     <div class="conteudo-principal">
         <h1>MJ FanPage: O Legado do Rei do Pop</h1>
-        <p class="subtitulo">Olá, eu sou o Renan. Criei este espaço para celebrar a genialidade de Michael Jackson, um artista que transformou a música para sempre.</p>
+        <p class="subtitulo">Olá, eu sou o Renan. Criei este espaço para celebrar a genialidade de Michael Jackson.</p>
 
         <p>Inclusive, comprei um CD da turnê "This Is It", que seria sua última série de shows. Mas, ele veio a falecer em 2009, poucos dias antes da turnê.</p>
-
         <button id="btn-foto">Mostrar meu CD de "This Is It"</button>
         <img id="foto-cd" class="escondida" src="imagem/michael.jpg.jpeg" alt="This Is It">
 
-        <h1 class="titulo-secao">Destaques da Carreira</h1>
+        <h1 class="titulo-secao">Destaques da Carreira (Clique no Álbum)</h1>
 
         <div class="container-albuns">
-            <div class="card-album-individual">
-                <a href="bad.html" target="_blank" rel="noopener noreferrer">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/5/51/Michael_Jackson_-_Bad.png" alt="Michael Jackson Bad">
-                </a>
+            <!-- Álbum Bad -->
+            <div class="card-album-individual" onclick="toggleMenu('menu-bad')">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/51/Michael_Jackson_-_Bad.png" alt="Bad">
                 <span>Álbum Bad (1987)</span>
+                <div id="menu-bad" class="menu-opcoes">
+                    <a href="https://www.youtube.com/watch?v=dsUXAEzaC3Q" target="_blank">Ver Videoclipe</a>
+                    <a href="bad.html">Ver Detalhes</a>
+                </div>
             </div>
-            <div class="card-album-individual">
-                <a href="thriller.html" target="_blank" rel="noopener noreferrer">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png" alt="Thriller Album">
-                </a>
+
+            <!-- Álbum Thriller -->
+            <div class="card-album-individual" onclick="toggleMenu('menu-thriller')">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png" alt="Thriller">
                 <span>Álbum Thriller (1982)</span>
+                <div id="menu-thriller" class="menu-opcoes">
+                    <a href="https://www.youtube.com/watch?v=sOnqjkJTMaA" target="_blank">Ver Videoclipe</a>
+                    <a href="thriller.html">Ver Detalhes</a>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
+        // Lógica do botão do CD
         const botao = document.getElementById('btn-foto');
         const fotoCd = document.getElementById('foto-cd');
-
-        botao.addEventListener('click', function() {
-            if (fotoCd.classList.contains('escondida')) {
-                fotoCd.classList.remove('escondida');
-                fotoCd.style.display = 'block';
-                setTimeout(() => { fotoCd.style.opacity = '1'; }, 10);
-                botao.innerText = 'Esconder meu CD';
-                botao.style.backgroundColor = '#e74c3c'; 
-            } else {
-                fotoCd.classList.add('escondida');
-                fotoCd.style.display = 'none';
-                fotoCd.style.opacity = '0';
-                botao.innerText = 'Mostrar meu CD de "This Is It"';
-                botao.style.backgroundColor = '#1db954'; 
-            }
+        botao.addEventListener('click', () => {
+            fotoCd.classList.toggle('escondida');
+            botao.innerText = fotoCd.classList.contains('escondida') ? 'Mostrar meu CD de "This Is It"' : 'Esconder meu CD';
+            botao.style.backgroundColor = fotoCd.classList.contains('escondida') ? '#1db954' : '#e74c3c';
         });
+
+        // Lógica do Menu dos Álbuns
+        function toggleMenu(id) {
+            const menu = document.getElementById(id);
+            menu.classList.toggle('ativo');
+        }
     </script>
 </body>
 </html>
