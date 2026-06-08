@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Álbum Thriller - MJ FanPage</title>
     <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         body {
             background-color: #121212;
@@ -13,61 +14,137 @@
             text-align: center;
             padding: 40px 20px;
         }
-        h1 { color: #FFD700; margin-bottom: 20px; }
-        h2 { color: #FFD700; margin-top: 30px; }
+        h1 { color: #FFD700; margin-bottom: 30px; }
         
-        .lista-musicas {
-            list-style: none;
-            padding: 0;
-            max-width: 400px;
+        /* Estrutura da Tabela de Músicas */
+        .tabela-musicas {
+            width: 100%;
+            max-width: 600px;
             margin: 0 auto;
+            border-collapse: collapse;
             text-align: left;
         }
-        .lista-musicas li {
-            padding: 10px;
+        .tabela-musicas tr {
             border-bottom: 1px solid #333;
         }
-        
-        .botoes-streaming { margin-top: 30px; }
-        .btn-stream {
-            display: inline-block;
-            padding: 12px 24px;
-            margin: 10px;
-            border-radius: 25px;
-            text-decoration: none;
+        .tabela-musicas td {
+            padding: 15px 10px;
+            vertical-align: middle;
+        }
+        .nome-musica {
+            font-size: 16px;
             font-weight: bold;
+        }
+        
+        /* Botões de Streaming redondos com Ícones */
+        .botoes-coluna {
+            text-align: right;
+            white-space: nowrap;
+        }
+        .btn-mini {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            margin-left: 8px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 18px; /* Tamanho do ícone */
             color: white;
             transition: 0.2s;
         }
         .btn-spotify { background-color: #1DB954; }
+        .btn-spotify:hover { background-color: #1ed760; transform: scale(1.1); }
         .btn-youtube { background-color: #FF0000; }
-        .btn-voltar { background-color: #333; color: #FFD700; margin-top: 40px; }
+        .btn-youtube:hover { background-color: #ff3333; transform: scale(1.1); }
+        
+        .btn-voltar { 
+            display: inline-block;
+            background-color: #333; 
+            color: #FFD700; 
+            padding: 12px 24px;
+            margin-top: 40px; 
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .btn-voltar:hover { background-color: #444; }
     </style>
 </head>
 <body>
 
     <h1>Álbum Thriller (1982)</h1>
     
-    <ul class="lista-musicas">
-        <li>1. Wanna Be Startin' Somethin'</li>
-        <li>2. Baby Be Mine</li>
-        <li>3. The Girl Is Mine (with Paul McCartney)</li>
-        <li>4. Thriller</li>
-        <li>5. Beat It</li>
-        <li>6. Billie Jean</li>
-        <li>7. Human Nature</li>
-        <li>8. P.Y.T. (Pretty Young Thing)</li>
-        <li>9. The Lady in My Life</li>
-    </ul>
-
-    <div class="botoes-streaming">
-        <h2>Onde Ouvir:</h2>
-        <a href="https://open.spotify.com/album/2ANVost0yzyYw2FisSgFoF" target="_blank" class="btn-stream btn-spotify">Ouvir no Spotify</a>
-        <a href="https://www.youtube.com/playlist?list=OLAK5uy_m9X_C8Cqf33Xy06p08Y_G1C51Xf-YfX_E" target="_blank" class="btn-stream btn-youtube">Ouvir no YouTube</a>
-    </div>
+    <table class="tabela-musicas">
+        <tr>
+            <td class="nome-musica">1. Wanna Be Startin' Somethin'</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/2mCg39wX6wG676451e089X1" target="_blank" class="btn-mini btn-spotify" title="Ouvir no Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/watch?v=4Uj3zitETs4" target="_blank" class="btn-mini btn-youtube" title="Assistir no YouTube"><i class="fab fa-youtube"></i></a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nome-musica">2. Baby Be Mine</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/2mCg39wX6wG676451e089X2" target="_blank" class="btn-mini btn-spotify" title="Ouvir no Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/watch?v=Z46GvEshXwA" target="_blank" class="btn-mini btn-youtube" title="Assistir no YouTube"><i class="fab fa-youtube"></i></a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nome-musica">3. The Girl Is Mine (with Paul McCartney)</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/2mCg39wX6wG676451e089X3" target="_blank" class="btn-mini btn-spotify" title="Ouvir no Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/watch?v=Y96mdVshB_Q" target="_blank" class="btn-mini btn-youtube" title="Assistir no YouTube"><i class="fab fa-youtube"></i></a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nome-musica">4. Thriller</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/2mCg39wX6wG676451e089X4" target="_blank" class="btn-mini btn-spotify" title="Ouvir no Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/watch?v=sOnqjkJTMaA" target="_blank" class="btn-mini btn-youtube" title="Assistir no YouTube"><i class="fab fa-youtube"></i></a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nome-musica">5. Beat It</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/2mCg39wX6wG676451e089X5" target="_blank" class="btn-mini btn-spotify" title="Ouvir no Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/watch?v=oRdxUFDoQe0" target="_blank" class="btn-mini btn-youtube" title="Assistir no YouTube"><i class="fab fa-youtube"></i></a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nome-musica">6. Billie Jean</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/2mCg39wX6wG676451e089X6" target="_blank" class="btn-mini btn-spotify" title="Ouvir no Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/watch?v=Zi_XLOBDo_Y" target="_blank" class="btn-mini btn-youtube" title="Assistir no YouTube"><i class="fab fa-youtube"></i></a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nome-musica">7. Human Nature</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/2mCg39wX6wG676451e089X7" target="_blank" class="btn-mini btn-spotify" title="Ouvir no Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/watch?v=7Y3ekvscscY" target="_blank" class="btn-mini btn-youtube" title="Assistir no YouTube"><i class="fab fa-youtube"></i></a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nome-musica">8. P.Y.T. (Pretty Young Thing)</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/2mCg39wX6wG676451e089X8" target="_blank" class="btn-mini btn-spotify" title="Ouvir no Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/watch?v=1XzY2ij_vL4" target="_blank" class="btn-mini btn-youtube" title="Assistir no YouTube"><i class="fab fa-youtube"></i></a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nome-musica">9. The Lady in My Life</td>
+            <td class="botoes-coluna">
+                <a href="https://open.spotify.com/track/2mCg39wX6wG676451e089X9" target="_blank" class="btn-mini btn-spotify" title="Ouvir no Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.youtube.com/watch?v=ccN9S0T298w" target="_blank" class="btn-mini btn-youtube" title="Assistir no YouTube"><i class="fab fa-youtube"></i></a>
+            </td>
+        </tr>
+    </table>
 
     <br>
-    <a href="index.html" class="btn-stream btn-voltar">← Voltar para a Home</a>
+    <a href="index.html" class="btn-voltar">← Voltar para a Home</a>
 
 </body>
 </html>
