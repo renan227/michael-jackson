@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Jackson</title>
+
+    <link rel="icon" type="image/png" href="imagem/image.png">
+
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo-nav">MJ FanPage</div>
+        <div class="links-nav">
+            <a href="#">Início</a>
+            <a href="#">Álbuns</a>
+            <a href="#">História</a>
+        </div>
+    </nav>
+
+    <div class="conteudo-principal">
+        <h1>Olá, meu nome é Renan e eu gosto muito do Michael Jackson</h1>
+
+        <button id="btn-foto">Mostrar meu CD de "This Is It"</button>
+
+        <img id="foto-cd" class="escondida" src="imagem/Michael.jpg.jpeg" alt="This Is It">
+
+        <p>Inclusivo, comprei um CD da turnê "This Is It", que seria sua última série de shows. Mas, ele veio a falecer em 2009, poucos dias antes da turnê.</p>
+
+        <h1 class="titulo-secao">Eu gosto muito da música Bad e do álbum Thriller.</h1>
+
+        <div class="container-albuns">
+            <div class="card-album-individual">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/51/Michael_Jackson_-_Bad.png" alt="Michael Jackson Bad">
+                <span>Álbum Bad (1987)</span>
+            </div>
+            <div class="card-album-individual">
+                <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png" alt="Thriller Album">
+                <span>Álbum Thriller (1982)</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const botao = document.getElementById('btn-foto');
+        const fotoCd = document.getElementById('foto-cd');
+
+        botao.addEventListener('click', function() {
+            if (fotoCd.classList.contains('escondida')) {
+                fotoCd.classList.remove('escondida');
+                fotoCd.style.display = 'block';
+                setTimeout(() => { fotoCd.style.opacity = '1'; }, 10);
+                botao.innerText = 'Esconder meu CD';
+                botao.style.backgroundColor = '#e74c3c'; 
+            } else {
+                fotoCd.classList.add('escondida');
+                fotoCd.style.display = 'none';
+                botao.innerText = 'Mostrar meu CD de "This Is It"';
+                botao.style.backgroundColor = '#1db954'; 
+            }
+        });
+    </script>
+</body>
+</html>
