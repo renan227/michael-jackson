@@ -1,27 +1,25 @@
-/* Configuração geral da página */
+/* Configuração geral */
 body {
     background-color: #121212; 
-    color: #ffffff;            
+    color: #ffffff; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     margin: 0;
-    padding: 0; /* Zerado para a barra grudar no topo */
+    padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;       
+    align-items: center; 
     width: 100%;
 }
 
-/* CONTAINER DO CONTEÚDO (Dá o espaçamento por causa da barra) */
 .conteudo-principal {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 20px 40px 20px; /* Margem superior para não cobrir o texto */
+    padding: 120px 20px 40px 20px;
     width: 100%;
     max-width: 1200px;
 }
 
-/* BARRA DE NAVEGAÇÃO COMPLETA */
 .navbar {
     position: fixed;
     top: 0;
@@ -36,102 +34,47 @@ body {
     box-sizing: border-box;
 }
 
-.logo-nav {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #f1c40f; /* Dourado */
-    letter-spacing: 1px;
-}
+.logo-nav { font-size: 1.4rem; font-weight: bold; color: #f1c40f; letter-spacing: 1px; }
 
-.links-nav a {
-    color: #b3b3b3;
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: 600;
-    transition: color 0.2s ease;
-}
+.links-nav a { color: #b3b3b3; text-decoration: none; margin-left: 25px; font-weight: 600; }
+.links-nav a:hover { color: #1db954; }
 
-.links-nav a:hover {
-    color: #1db954; /* Verde ao passar o mouse */
-}
+h1 { font-size: 2.5rem; text-align: center; color: #f1c40f; margin-bottom: 10px; }
+.subtitulo { font-size: 1.2rem; color: #cccccc; margin-bottom: 40px; text-align: center; }
 
-/* Títulos */
-h1 {
-    font-size: 2.2rem;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #f1c40f; 
-}
+p { font-size: 1.1rem; line-height: 1.6; text-align: center; max-width: 700px; color: #b3b3b3; margin-bottom: 25px; }
 
-/* Parágrafos */
-p {
-    font-size: 1.2rem;
-    line-height: 1.6;          
-    text-align: center;
-    max-width: 700px;
-    color: #b3b3b3;            
+.titulo-secao {
+    margin-top: 80px;
     margin-bottom: 40px;
-}
-
-/* CONTAINER DOS ÁLBUNS */
-.container-albuns {
-    display: flex;
-    flex-direction: row;       
-    justify-content: center;   
-    align-items: flex-start;       
-    gap: 50px; /* Aumentamos o espaço entre as fotos */
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f1c40f;
+    display: inline-block;
     width: 100%;
-    margin-top: 20px;
-    margin-bottom: 50px;
+    max-width: 600px;
+    text-align: center;
 }
 
-/* Moldura para cada imagem + legenda */
+.container-albuns { display: flex; justify-content: center; gap: 50px; width: 100%; }
+
 .card-album-individual {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #1e1e1e; /* Fundo cinza escuro estilo card */
+    background-color: #1e1e1e;
     padding: 15px;
     border-radius: 14px;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-.card-album-individual:hover {
-    transform: scale(1.04);
-    background-color: #282828; /* Clareia um pouco no hover */
-}
+.card-album-individual:hover { transform: scale(1.04); }
 
-.card-album-individual span {
-    margin-top: 15px;
-    font-weight: bold;
-    color: #ffffff;
-    font-size: 1rem;
-}
+img { max-width: 100%; height: auto; max-height: 320px; border-radius: 8px; }
 
-/* Estilo padrão das Imagens */
-img {
-    max-width: 100%;
-    height: auto;
-    max-height: 320px;         
-    object-fit: cover;         
-    border-radius: 8px;       
-}
+.escondida { display: none; opacity: 0; }
 
-/* Esconder foto no início */
-.escondida {
-    display: none;
-    opacity: 0;
-}
+#foto-cd { max-height: 400px; margin-bottom: 20px; border-radius: 12px; transition: opacity 0.3s ease; }
 
-#foto-cd {
-    max-height: 400px;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
-}
-
-/* Botão Spotify */
 #btn-foto {
     background-color: #1db954; 
     color: white;
@@ -142,11 +85,7 @@ img {
     border-radius: 30px;
     cursor: pointer;
     margin-bottom: 25px;
-    box-shadow: 0px 6px 20px rgba(29, 185, 84, 0.4);
-    transition: all 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
-#btn-foto:hover {
-    background-color: #1ed760;
-    transform: scale(1.05);
-}
+#btn-foto:hover { background-color: #1ed760; transform: scale(1.05); }
