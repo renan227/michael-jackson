@@ -1,66 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Turnê This Is It</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f4f4f9;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Jackson</title>
 
-    /* Estilo do bloco de texto que será escondido */
-    .conteudo-cd {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      transition: opacity 0.3s ease;
-    }
+    <link rel="icon" type="image/png" href="imagem/image.png">
 
-    /* Estilo do botão verde */
-    .btn-esconder-cd {
-      background-color: #28a745; /* Verde */
-      color: #ffffff; /* Texto branco */
-      border: none;
-      border-radius: 5px;
-      padding: 12px 24px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.2s ease, transform 0.1s ease;
-    }
-
-    /* Efeito de hover (passar o mouse) */
-    .btn-esconder-cd:hover {
-      background-color: #218838;
-    }
-
-    /* Efeito de clique */
-    .btn-esconder-cd:active {
-      transform: scale(0.98);
-    }
-  </style>
+    <link rel="stylesheet" href="Style.css">
+    
+    <style>
+        /* Garante que o botão comece verde (estilo Spotify/moderno) */
+        #btn-foto {
+            background-color: #1db954; 
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            margin-bottom: 15px;
+        }
+        #btn-foto:hover {
+            background-color: #1aa34a;
+        }
+    </style>
 </head>
 <body>
 
-  <div id="textoCD" class="conteudo-cd">
-    Inclusive, comprei um CD da turnê "This Is It", que seria sua última série de shows. Mas, ele veio a falecer em 2009, poucos dias antes da turnê.
-  </div>
+    <nav class="navbar">
+        <div class="logo-nav">MJ FanPage</div>
+        <div class="links-nav">
+            <a href="#">Início</a>
+            <a href="https://www.youtube.com/results?search_query=michael+jackson+albuns" target="_blank" rel="noopener noreferrer">Álbuns</a>
+            <a href="https://pt.wikipedia.org/wiki/Michael_Jackson" target="_blank" rel="noopener noreferrer">História</a>
+        </div>
+    </nav>
 
-  <button class="btn-esconder-cd" onclick="esconderElemento()">
-    <span>💿</span> Esconder CD
-  </button>
+    <div class="conteudo-principal">
+        <h1>Olá, meu nome é Renan e eu gosto muito do Michael Jackson</h1>
 
-  <script>
-    function esconderElemento() {
-      var x = document.getElementById("textoCD");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
+        <!-- O texto do CD que você pediu -->
+        <p>Inclusive, comprei um CD da turnê "This Is It", que seria sua última série de shows. Mas, ele veio a falecer em 2009, poucos dias antes da turnê.</p>
+
+        <!-- O botão verde e a foto posicionados logo abaixo da fala -->
+        <button id="btn-foto">Mostrar meu CD de "This Is It"</button>
+
+        <img id="foto-cd" class="escondida" src="imagem/michael.jpg.jpeg" alt="This Is It" style="display: none; opacity: 0; transition: opacity 0.3s ease; margin-bottom: 20px;">
+
+        <h1 class="titulo-secao">Eu gosto muito da música Bad e do álbum Thriller.</h1>
+
+        <div class="container-albuns">
+            <div class="card-album-individual">
+                <a href="bad.html" target="_blank" rel="noopener noreferrer">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/5/51/Michael_Jackson_-_Bad.png" alt="Michael Jackson Bad">
+                </a>
+                <span>Álbum Bad (1987)</span>
+            </div>
+            <div class="card-album-individual">
+                <a href="thriller.html" target="_blank" rel="noopener noreferrer">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png" alt="Thriller Album">
+                </a>
+                <span>Álbum Thriller (1982)</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const botao = document.getElementById('btn-foto');
+        const fotoCd = document.getElementById('foto-cd');
+
+        botao.addEventListener('click', function() {
+            if (fotoCd.classList.contains('escondida')) {
+                fotoCd.classList.remove('escondida');
+                fotoCd.style.display = 'block';
+                setTimeout(() => { fotoCd.style.opacity = '1'; }, 10);
+                botao.innerText = 'Esconder meu CD';
+                botao.style.backgroundColor = '#e74c3c'; // Fica vermelho ao mostrar
+            } else {
+                fotoCd.classList.add('escondida');
+                fotoCd.style.display = 'none';
+                fotoCd.style.opacity = '0';
+                botao.innerText = 'Mostrar meu CD de "This Is It"';
+                botao.style.backgroundColor = '#1db954'; // Volta a ser verde ao esconder
+            }
+        });
+    </script>
+</body>
+</html>
