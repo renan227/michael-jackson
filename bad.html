@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum Bad - MJ FanPage</title>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        h1 { color: #FFD700; margin-bottom: 20px; }
+        h2 { color: #FFD700; margin-top: 30px; }
+        
+        .lista-musicas {
+            list-style: none;
+            padding: 0;
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .lista-musicas li {
+            padding: 10px;
+            border-bottom: 1px solid #333;
+        }
+        
+        .botoes-streaming { margin-top: 30px; }
+        .btn-stream {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            transition: 0.2s;
+        }
+        .btn-spotify { background-color: #1DB954; }
+        .btn-youtube { background-color: #FF0000; }
+        .btn-voltar { background-color: #333; color: #FFD700; margin-top: 40px; }
+    </style>
+</head>
+<body>
 
+    <h1>Álbum Bad (1987)</h1>
+    
+    <ul class="lista-musicas">
+        <li>1. Bad</li>
+        <li>2. The Way You Make Me Feel</li>
+        <li>3. Speed Demon</li>
+        <li>4. Liberian Girl</li>
+        <li>5. Just Good Friends</li>
+        <li>6. Another Part of Me</li>
+        <li>7. Man in the Mirror</li>
+        <li>8. I Just Can't Stop Loving You</li>
+        <li>9. Dirty Diana</li>
+        <li>10. Smooth Criminal</li>
+        <li>11. Leave Me Alone</li>
+    </ul>
+
+    <div class="botoes-streaming">
+        <h2>Onde Ouvir:</h2>
+        <a href="https://open.spotify.com/album/2Y936w996uYvAofr7gV47C" target="_blank" class="btn-stream btn-spotify">Ouvir no Spotify</a>
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_mN3m6T5Z0Y3D_AepOqD8KbeJ_x3WbB7Ag" target="_blank" class="btn-stream btn-youtube">Ouvir no YouTube</a>
+    </div>
+
+    <br>
+    <a href="index.html" class="btn-stream btn-voltar">← Voltar para a Home</a>
+
+</body>
+</html>
