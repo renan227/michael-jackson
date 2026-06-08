@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum Thriller - MJ FanPage</title>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        h1 { color: #FFD700; margin-bottom: 20px; }
+        h2 { color: #FFD700; margin-top: 30px; }
+        
+        .lista-musicas {
+            list-style: none;
+            padding: 0;
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .lista-musicas li {
+            padding: 10px;
+            border-bottom: 1px solid #333;
+        }
+        
+        .botoes-streaming { margin-top: 30px; }
+        .btn-stream {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            transition: 0.2s;
+        }
+        .btn-spotify { background-color: #1DB954; }
+        .btn-youtube { background-color: #FF0000; }
+        .btn-voltar { background-color: #333; color: #FFD700; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <h1>Álbum Thriller (1982)</h1>
+    
+    <ul class="lista-musicas">
+        <li>1. Wanna Be Startin' Somethin'</li>
+        <li>2. Baby Be Mine</li>
+        <li>3. The Girl Is Mine (with Paul McCartney)</li>
+        <li>4. Thriller</li>
+        <li>5. Beat It</li>
+        <li>6. Billie Jean</li>
+        <li>7. Human Nature</li>
+        <li>8. P.Y.T. (Pretty Young Thing)</li>
+        <li>9. The Lady in My Life</li>
+    </ul>
+
+    <div class="botoes-streaming">
+        <h2>Onde Ouvir:</h2>
+        <a href="https://open.spotify.com/album/2ANVost0yzyYw2FisSgFoF" target="_blank" class="btn-stream btn-spotify">Ouvir no Spotify</a>
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_m9X_C8Cqf33Xy06p08Y_G1C51Xf-YfX_E" target="_blank" class="btn-stream btn-youtube">Ouvir no YouTube</a>
+    </div>
+
+    <br>
+    <a href="index.html" class="btn-stream btn-voltar">← Voltar para a Home</a>
+
+</body>
+</html>
