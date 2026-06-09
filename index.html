@@ -2,12 +2,9 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Jackson FanPage</title>
-    
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    
     <link rel="stylesheet" href="Style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -21,27 +18,23 @@
     </nav>
 
     <div class="conteudo-principal">
-        <div class="hero-introducao">
-            <h1>MJ FanPage: O Legado do Rei do Pop</h1>
-            <p>Um tributo criado por <strong>Renan</strong> para celebrar a genialidade de Michael Jackson.</p>
-        </div>
-
+        <h1>MJ FanPage: O Legado do Rei do Pop</h1>
+        <p>Um tributo criado por <strong>Renan</strong> para celebrar a genialidade de Michael Jackson.</p>
+        
         <p>Inclusive, comprei um CD da turnê "This Is It".</p>
-        
         <button id="btn-foto">Mostrar meu CD de "This Is It"</button>
-        
-        <img id="foto-cd" class="escondida" src="image.png" alt="This Is It" style="max-height: 400px; margin-top: 20px;">
+        <br><br>
+        <img id="foto-cd" src="image.png" alt="This Is It" style="max-width: 300px; display: none;">
 
-        <h1 class="titulo-secao">Destaques da Carreira</h1>
-
+        <h2>Destaques da Carreira</h2>
         <div class="container-albuns">
-            <div class="card-album-individual">
-                <a href="bad.html"><img src="https://upload.wikimedia.org/wikipedia/en/5/51/Michael_Jackson_-_Bad.png" alt="Bad"></a>
-                <span>Álbum Bad (1987)</span>
+            <div>
+                <a href="bad.html"><img src="https://upload.wikimedia.org/wikipedia/en/5/51/Michael_Jackson_-_Bad.png" alt="Bad" width="150"></a>
+                <p>Álbum Bad (1987)</p>
             </div>
-            <div class="card-album-individual">
-                <a href="thriller.html"><img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png" alt="Thriller"></a>
-                <span>Álbum Thriller (1982)</span>
+            <div>
+                <a href="thriller.html"><img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png" alt="Thriller" width="150"></a>
+                <p>Álbum Thriller (1982)</p>
             </div>
         </div>
     </div>
@@ -49,13 +42,12 @@
     <script>
         const botao = document.getElementById('btn-foto');
         const fotoCd = document.getElementById('foto-cd');
-        
-        botao.addEventListener('click', function() {
-            if (fotoCd.classList.contains('escondida')) {
-                fotoCd.classList.remove('escondida');
+        botao.addEventListener('click', () => {
+            if (fotoCd.style.display === 'none') {
+                fotoCd.style.display = 'block';
                 botao.innerText = 'Esconder meu CD';
             } else {
-                fotoCd.classList.add('escondida');
+                fotoCd.style.display = 'none';
                 botao.innerText = 'Mostrar meu CD de "This Is It"';
             }
         });
