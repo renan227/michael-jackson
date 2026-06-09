@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Jackson FanPage</title>
-    <link rel="stylesheet" href="meuestilo.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
 
@@ -18,40 +17,53 @@
         </div>
     </nav>
 
-    <div class="super-container">
-        <div class="conteudo-principal">
+    <div class="conteudo-principal">
+        <div class="hero-introducao">
             <h1>MJ FanPage: O Legado do Rei do Pop</h1>
             <p>Um tributo criado por <strong>Renan</strong> para celebrar a genialidade de Michael Jackson.</p>
-            
-            <p>Inclusive, comprei um CD da turnê "This Is It".</p>
-            <button id="btn-foto">Mostrar meu CD de "This Is It"</button>
-            <br>
-            <img id="foto-cd" src="image.png" alt="This Is It" style="max-width: 300px; display: none; margin: 20px auto;">
+        </div>
 
-            <h2>Destaques da Carreira</h2>
-            <div class="container-albuns">
-                <div class="album">
-                    <a href="bad.html"><img src="https://upload.wikimedia.org/wikipedia/en/5/51/Michael_Jackson_-_Bad.png" alt="Bad"></a>
-                    <p>Álbum Bad (1987)</p>
-                </div>
-                <div class="album">
-                    <a href="thriller.html"><img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png" alt="Thriller"></a>
-                    <p>Álbum Thriller (1982)</p>
-                </div>
+        <p>Inclusive, comprei um CD da turnê "This Is It", que seria sua última série de shows. Mas, ele veio a falecer em 2009, poucos dias antes da turnê.</p>
+        
+        <button id="btn-foto">Mostrar meu CD de "This Is It"</button>
+        <img id="foto-cd" class="escondida" src="imagem/michael.jpg.jpeg" alt="This Is It" style="max-height: 400px; margin-bottom: 20px;">
+
+        <h1 class="titulo-secao">Destaques da Carreira</h1>
+
+        <div class="container-albuns">
+            <div class="card-album-individual">
+                <a href="bad.html"><img src="https://upload.wikimedia.org/wikipedia/en/5/51/Michael_Jackson_-_Bad.png" alt="Bad"></a>
+                <span>Álbum Bad (1987)</span>
+            </div>
+            <div class="card-album-individual">
+                <a href="thriller.html"><img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png" alt="Thriller"></a>
+                <span>Álbum Thriller (1982)</span>
             </div>
         </div>
     </div>
 
+    <footer class="rodape">
+        <p>© 2026 MJ FanPage | Criado por Renan</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/27_renan" target="_blank">Instagram: @27_renan</a>
+            <a href="mailto:mjfanpage.ouvidoria@gmail.com">Ouvidoria: mjfanpage.ouvidoria@gmail.com</a>
+        </div>
+    </footer>
+
     <script>
         const botao = document.getElementById('btn-foto');
         const fotoCd = document.getElementById('foto-cd');
-        botao.addEventListener('click', () => {
-            if (fotoCd.style.display === 'none') {
+        botao.addEventListener('click', function() {
+            if (fotoCd.classList.contains('escondida')) {
+                fotoCd.classList.remove('escondida');
                 fotoCd.style.display = 'block';
                 botao.innerText = 'Esconder meu CD';
+                botao.style.backgroundColor = '#e74c3c';
             } else {
+                fotoCd.classList.add('escondida');
                 fotoCd.style.display = 'none';
                 botao.innerText = 'Mostrar meu CD de "This Is It"';
+                botao.style.backgroundColor = '#1db954';
             }
         });
     </script>
