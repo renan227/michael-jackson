@@ -27,7 +27,7 @@
         <p>Inclusive, comprei um CD da turnê "This Is It".</p>
         
         <button id="btn-foto">Mostrar meu CD de "This Is It"</button>
-        <img id="foto-cd" class="escondida" src="image.png" alt="This Is It" style="max-height: 400px; margin-bottom: 20px;">
+        <img id="foto-cd" class="escondida" src="michael.jpg.jpeg" alt="This Is It" style="max-height: 400px; margin: 20px auto; display: none; border: 4px solid #f1c40f; border-radius: 10px;">
 
         <h1 class="titulo-secao">Destaques da Carreira</h1>
 
@@ -51,13 +51,11 @@
         const botao = document.getElementById('btn-foto');
         const fotoCd = document.getElementById('foto-cd');
         botao.addEventListener('click', function() {
-            if (fotoCd.classList.contains('escondida')) {
-                fotoCd.classList.remove('escondida');
+            if (fotoCd.style.display === 'none') {
                 fotoCd.style.display = 'block';
                 botao.innerText = 'Esconder meu CD';
                 botao.style.backgroundColor = '#e74c3c';
             } else {
-                fotoCd.classList.add('escondida');
                 fotoCd.style.display = 'none';
                 botao.innerText = 'Mostrar meu CD de "This Is It"';
                 botao.style.backgroundColor = '#1db954';
