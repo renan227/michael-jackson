@@ -1,24 +1,6 @@
-.escondida {
-    display: none !important;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
-}
-
-.conteudo-principal {
-    text-align: center;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #1db954;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-}
+body { font-family: Arial, sans-serif; margin: 0; background-color: #f4f4f4; color: #333; }
+.navbar { background: #333; color: white; padding: 15px; display: flex; justify-content: space-between; }
+.navbar a { color: white; margin-left: 15px; text-decoration: none; }
+.conteudo-principal { text-align: center; padding: 20px; }
+.container-albuns { display: flex; justify-content: center; gap: 40px; margin-top: 20px; }
+button { padding: 10px 20px; background: #1db954; color: white; border: none; cursor: pointer; }
