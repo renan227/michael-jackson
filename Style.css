@@ -1,6 +1,8 @@
-body { font-family: Arial, sans-serif; margin: 0; background-color: #f4f4f4; color: #333; }
-.navbar { background: #333; color: white; padding: 15px; display: flex; justify-content: space-between; }
-.navbar a { color: white; margin-left: 15px; text-decoration: none; }
+body { font-family: sans-serif; margin: 0; background-color: #f4f4f4; color: #333; }
+.navbar { background: #333; color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; }
+.navbar .links-nav a { color: white; margin-left: 15px; text-decoration: none; }
 .conteudo-principal { text-align: center; padding: 20px; }
 .container-albuns { display: flex; justify-content: center; gap: 40px; margin-top: 20px; }
-button { padding: 10px 20px; background: #1db954; color: white; border: none; cursor: pointer; }
+.container-albuns img { width: 150px; border-radius: 8px; }
+button { padding: 10px 20px; background: #1db954; color: white; border: none; cursor: pointer; border-radius: 5px; font-size: 16px; margin: 15px; }
+button:hover { background: #178f42; }
